@@ -1,0 +1,49 @@
+package com.li.zhitu.aigc.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.li.zhitu.aigc.entity.ChatSession;
+import com.li.zhitu.aigc.vo.ChatSessionVO;
+import com.li.zhitu.aigc.vo.MessageVO;
+import com.li.zhitu.aigc.vo.SessionVO;
+
+import java.util.List;
+import java.util.Map;
+
+public interface ChatSessionService extends IService<ChatSession> {
+
+    /**
+     * 创建会话session
+     *
+     * @param num 热门问题的数量
+     * @return 会话信息
+     */
+    SessionVO createSession(Integer num);
+
+    /**
+     * 获取热门会话
+     *
+     * @return 热门会话列表
+     */
+    List<SessionVO.Example> hotExamples(Integer num);
+
+    /**
+     * 根据会话id查询消息列表
+     *
+     * @param sessionId 会话id
+     * @return 消息列表
+     */
+    List<MessageVO> queryBySessionId(String sessionId);
+
+    /**
+     * 更新会话更新时间
+     *
+     * @param sessionId 会话ID，用于标识特定的聊天会话
+     * @param title     新的会话标题，如果为空则不进行更新
+     * @param userId    用户ID
+     */
+    void update(String sessionId, String title, Long userId);
+
+    Map<String, List<ChatSessionVO>> queryHistorySession();
+
+    void deleteHistorySession(String sessionId);
+}

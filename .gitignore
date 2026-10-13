@@ -1,0 +1,28 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+target
+*.class
+
+*.log
+.settings
+.project
+logs
+job
+
+templates
+### 本地工具与工程产物（禁止入库）###
+.zcode/
+.trae/
+.agents/
+.flattened-pom.xml
+.DS_Store
+*.hprof
+
+/.git-origin-backup/

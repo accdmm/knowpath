@@ -1,0 +1,38 @@
+server:
+  port: 8087  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+  error:
+    include-message: always #返回的响应体带上message
+spring:
+  profiles:
+    active: local
+  application:
+    name: pay-service
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.li.zhitu.pay.controller
+    title: 知途在线学习平台 - 支付中心接口文档
+    description: 该服务提供微信、支付宝等各种平台的支付、退款等功能
+    contact-name: 李梦豪
+    contact-url: https://github.com/accdmm/knowpath
+    contact-email: 3414724907@qq.com
+    version: v1.0
+  jdbc:
+    database: tj_pay
+  pay:
+    notifyHost: https://6b9f16dd.r2.cpolar.top/ps
+    ali:
+      # 凭据不写进仓库：在 Nacos 配置中心以同名配置项提供
+      appId: "******"
+      merchantPrivateKey: "******"
+      publicKey: "******"
+    wx:
+      # 微信支付凭据同样从配置中心注入
+      appId: "******"
+      mchId: "******"
+      mchSerialNo: "******"
+      privateKey: "******"
+      apiV3Key: "******"

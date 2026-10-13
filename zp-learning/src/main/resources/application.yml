@@ -1,0 +1,27 @@
+server:
+  port: 8090  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: local
+  application:
+    name: learning-service
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.li.zhitu.learning.controller
+    title: 知途在线学习平台 - 学习中心接口文档
+    description: 该服务包含用户学习的各种辅助功能
+    contact-name: 李梦豪
+    contact-url: https://github.com/accdmm/knowpath
+    contact-email: 3414724907@qq.com
+    version: v1.0
+  jdbc:
+    database: tj_learning
+  auth:
+    resource:
+      enable: false
+  ai:
+    user-id: 9999

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.li.zhitu.pay.sdk.config.PayApiImportConfiguration

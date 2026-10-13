@@ -1,0 +1,4 @@
+com.li.zhitu.api.config.RequestIdRelayConfiguration
+com.li.zhitu.api.config.RoleCacheConfig
+com.li.zhitu.api.config.FallbackConfig
+com.li.zhitu.api.config.CategoryCacheConfig

@@ -1,0 +1,25 @@
+server:
+  port: 8095  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: local
+  application:
+    name: data-service
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.li.zhitu.data.controller
+    title: 知途在线学习平台 - 数据中心接口文档
+    description: 该服务包含数据看板统计的功能
+    contact-name: 李梦豪
+    contact-url: https://github.com/accdmm/knowpath
+    contact-email: 3414724907@qq.com
+    version: v1.0
+  jdbc:
+    database: tj_data
+  auth:
+    resource:
+      enable: true

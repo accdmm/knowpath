@@ -1,0 +1,9 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ com.li.zhitu.common.autoconfigure.mq.MqConfig,\
+ com.li.zhitu.common.autoconfigure.mvc.JsonConfig,\
+ com.li.zhitu.common.autoconfigure.mvc.MvcConfig,\
+ com.li.zhitu.common.autoconfigure.mvc.ParamCheckerConfig,\
+ com.li.zhitu.common.autoconfigure.mybatis.MybatisConfig,\
+ com.li.zhitu.common.autoconfigure.redisson.RedissonConfig,\
+ com.li.zhitu.common.autoconfigure.swagger.Knife4jConfiguration, \
+ com.li.zhitu.common.autoconfigure.xxljob.XxlJobConfig

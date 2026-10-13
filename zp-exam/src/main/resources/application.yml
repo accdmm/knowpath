@@ -1,0 +1,27 @@
+server:
+  port: 8089  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+  error:
+    include-message: always #返回的响应体带上message
+spring:
+  profiles:
+    active: local
+  application:
+    name: exam-service
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.li.zhitu.exam.controller
+    title: 知途在线学习平台 - 考试中心接口文档
+    description: 该服务提供题目管理、考试管理、数据统计等功能
+    contact-name: 李梦豪
+    contact-url: https://github.com/accdmm/knowpath
+    contact-email: 3414724907@qq.com
+    version: v1.0
+  jdbc:
+    database: tj_exam
+  auth:
+    resource:
+      enable: false
